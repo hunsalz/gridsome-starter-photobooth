@@ -1,6 +1,6 @@
 <template>
   <Layout :show-back-link="false">
-    <div>
+    <div v-if="process.isClient">
       <code v-if="device">{{ device.label }}</code>
       <vue-web-cam
         ref="webcam"
