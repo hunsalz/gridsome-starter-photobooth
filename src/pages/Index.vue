@@ -1,8 +1,9 @@
 <template>
   <Layout :show-back-link="false">
-    <div v-if="process.isClient">
+    <div>
       <code v-if="device">{{ device.label }}</code>
-      <vue-web-cam
+      <ClientOnly>
+        <WebCam
         ref="webcam"
         :device-id="deviceId"
         width="100%"
@@ -12,11 +13,12 @@
         @cameras="onCameras"
         @camera-change="onCameraChange"
       />
-      <!--       <div class="grid">
+        <!--       <div class="grid">
         <div class="cards" v-for="edge in computeCards" :key="edge.id">
           <CardLayout class="card-layout" :item="edge" />
         </div>
       </div> -->
+      </ClientOnly>
     </div>
   </Layout>
 </template>
@@ -34,12 +36,14 @@ query {
 
 <script>
 import CardLayout from "~/components/CardLayout.vue";
-import { WebCam } from "vue-web-cam";
 
 export default {
   components: {
     CardLayout,
-    "vue-web-cam": WebCam
+    WebCam: () =>
+      import("vue-web-cam")
+        .then(m => m.WebCam)
+        .catch()
   },
   data: function () {
     return {
