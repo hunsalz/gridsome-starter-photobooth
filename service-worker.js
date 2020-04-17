@@ -27,11 +27,11 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "/gridsome-starter-photobooth/404.html",
-    "revision": "e95276182a240d30ffdda6dabe009332"
+    "revision": "7b279a6c9d4088e7dbefc6dba59a6570"
   },
   {
     "url": "/gridsome-starter-photobooth/404/index.html",
-    "revision": "e95276182a240d30ffdda6dabe009332"
+    "revision": "7b279a6c9d4088e7dbefc6dba59a6570"
   },
   {
     "url": "/gridsome-starter-photobooth/assets/css/0.styles.85e931eb.css",
@@ -39,19 +39,19 @@ self.__precacheManifest = [
   },
   {
     "url": "/gridsome-starter-photobooth/assets/data/404/index.json",
-    "revision": "4f86b4400afb578f3127b75bd9450629"
+    "revision": "a560bd8a7bc46e8148588dc8dff678ac"
   },
   {
     "url": "/gridsome-starter-photobooth/assets/data/index.json",
-    "revision": "730d1dcd8eafd8d10b7dd5348669ed6f"
+    "revision": "12d3b034ec1f77472d68e2b9a3651e23"
   },
   {
     "url": "/gridsome-starter-photobooth/assets/js/4.50de8a4b.js",
     "revision": "62a319082ab0c22ec305f0b574c4b9bf"
   },
   {
-    "url": "/gridsome-starter-photobooth/assets/js/app.7bab3538.js",
-    "revision": "461ea5b709f25ecab7c48304d475e978"
+    "url": "/gridsome-starter-photobooth/assets/js/app.aa2c7699.js",
+    "revision": "4111ef1b9336cf86c392eae0249b125e"
   },
   {
     "url": "/gridsome-starter-photobooth/assets/js/page--node-modules--gridsome--app--pages--404-vue.a39b9875.js",
@@ -63,7 +63,7 @@ self.__precacheManifest = [
   },
   {
     "url": "/gridsome-starter-photobooth/index.html",
-    "revision": "736308c477af0e70050692da7062ecc0"
+    "revision": "cb0ee2b7ecd188bc5364d8f818a5393c"
   },
   {
     "url": "/gridsome-starter-photobooth/manifest.json",
