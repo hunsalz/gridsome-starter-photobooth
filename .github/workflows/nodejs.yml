@@ -3,9 +3,12 @@ name: Gridsome CI-CD
 on: [push]
 
 env:
+  # workaround until Actions supports something like exists()
   HAS_EMAIL: ${{ secrets.EMAIL }}
   HAS_GH_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
-  # workaround until Actions supports something like exists()
+  # GH PAGES
+  SITE_URL: https://hunsalz.github.io
+  PATH_PREFIX: /gridsome-starter-photobooth
 
 jobs:
   build:
