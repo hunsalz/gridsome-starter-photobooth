@@ -4,21 +4,51 @@
       <code v-if="device">{{ device.label }}</code>
       <ClientOnly>
         <WebCam
-        ref="webcam"
-        :device-id="deviceId"
-        width="100%"
-        @started="onStarted"
-        @stopped="onStopped"
-        @error="onError"
-        @cameras="onCameras"
-        @camera-change="onCameraChange"
-      />
+          ref="webcam"
+          :device-id="deviceId"
+          width="100%"
+          @started="onStarted"
+          @stopped="onStopped"
+          @error="onError"
+          @cameras="onCameras"
+          @camera-change="onCameraChange"
+        />
+        <div class="row">
+          <div class="col-md-12">
+            <select v-model="camera">
+              <option>-- Select Device --</option>
+              <option
+                v-for="device in devices"
+                :key="device.deviceId"
+                :value="device.deviceId"
+                >{{ device.label }}</option
+              >
+            </select>
+          </div>
+          <div class="col-md-12">
+            <button type="button" class="btn btn-primary" @click="onCapture">
+              Capture Photo
+            </button>
+            <button type="button" class="btn btn-danger" @click="onStop">
+              Stop Camera
+            </button>
+            <button type="button" class="btn btn-success" @click="onStart">
+              Start Camera
+            </button>
+          </div>
+        </div>
         <!--       <div class="grid">
         <div class="cards" v-for="edge in computeCards" :key="edge.id">
           <CardLayout class="card-layout" :item="edge" />
         </div>
       </div> -->
       </ClientOnly>
+    </div>
+    <div class="col-md-6">
+      <h2>Captured Image</h2>
+      <figure class="figure">
+        <img :src="img" class="img-responsive" />
+      </figure>
     </div>
   </Layout>
 </template>
@@ -42,15 +72,15 @@ export default {
     CardLayout,
     WebCam: () =>
       import("vue-web-cam")
-        .then(m => m.WebCam)
-        .catch()
+        .then((m) => m.WebCam)
+        .catch(),
   },
   data: function () {
     return {
       img: null,
       camera: null,
       deviceId: null,
-      devices: []
+      devices: [],
     };
   },
   metaInfo() {
@@ -59,9 +89,9 @@ export default {
       meta: [
         {
           name: "description",
-          content: this.$page.metadata.siteDescription
-        }
-      ]
+          content: this.$page.metadata.siteDescription,
+        },
+      ],
     };
   },
   created: function () {},
@@ -77,13 +107,13 @@ export default {
         this.camera = first.deviceId;
         this.deviceId = first.deviceId;
       }
-    }
+    },
   },
   beforeDestroy() {},
   computed: {
     device: function () {
-      return this.devices.find(n => n.deviceId === this.deviceId);
-    }
+      return this.devices.find((n) => n.deviceId === this.deviceId);
+    },
   },
   methods: {
     onCapture() {
@@ -112,8 +142,8 @@ export default {
       this.deviceId = deviceId;
       this.camera = deviceId;
       console.log("On Camera Change Event", deviceId);
-    }
-  }
+    },
+  },
 };
 </script>
 
