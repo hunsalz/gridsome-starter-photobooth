@@ -27,11 +27,11 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "/gridsome-starter-photobooth/404.html",
-    "revision": "7b279a6c9d4088e7dbefc6dba59a6570"
+    "revision": "df81d50cb50425f4f3fd34e690d42b29"
   },
   {
     "url": "/gridsome-starter-photobooth/404/index.html",
-    "revision": "7b279a6c9d4088e7dbefc6dba59a6570"
+    "revision": "df81d50cb50425f4f3fd34e690d42b29"
   },
   {
     "url": "/gridsome-starter-photobooth/assets/css/0.styles.85e931eb.css",
@@ -39,31 +39,31 @@ self.__precacheManifest = [
   },
   {
     "url": "/gridsome-starter-photobooth/assets/data/404/index.json",
-    "revision": "a560bd8a7bc46e8148588dc8dff678ac"
+    "revision": "3296e56bb3afe256d52c7be8805c36ee"
   },
   {
     "url": "/gridsome-starter-photobooth/assets/data/index.json",
-    "revision": "12d3b034ec1f77472d68e2b9a3651e23"
+    "revision": "841ff7f786c13249a8c8e890c48e86b5"
   },
   {
     "url": "/gridsome-starter-photobooth/assets/js/4.50de8a4b.js",
     "revision": "62a319082ab0c22ec305f0b574c4b9bf"
   },
   {
-    "url": "/gridsome-starter-photobooth/assets/js/app.aa2c7699.js",
-    "revision": "4111ef1b9336cf86c392eae0249b125e"
+    "url": "/gridsome-starter-photobooth/assets/js/app.6f344c96.js",
+    "revision": "86885fd0b96e2c1d46748a932ffd36ac"
   },
   {
     "url": "/gridsome-starter-photobooth/assets/js/page--node-modules--gridsome--app--pages--404-vue.a39b9875.js",
     "revision": "e52cb085e849ecd90739951b603b52e8"
   },
   {
-    "url": "/gridsome-starter-photobooth/assets/js/page--src--pages--index-vue.276cc4e4.js",
-    "revision": "3e4221ed0d770dc0b09e5cac57c7af6b"
+    "url": "/gridsome-starter-photobooth/assets/js/page--src--pages--index-vue.86815ef0.js",
+    "revision": "44adf7341ce7ea885b922970e3286155"
   },
   {
     "url": "/gridsome-starter-photobooth/index.html",
-    "revision": "cb0ee2b7ecd188bc5364d8f818a5393c"
+    "revision": "cd70ac10215bbff77d788912442dfb5e"
   },
   {
     "url": "/gridsome-starter-photobooth/manifest.json",
